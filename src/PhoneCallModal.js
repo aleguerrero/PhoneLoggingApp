@@ -2,6 +2,7 @@
 import ReactAudioPlayer from "react-audio-player";
 import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import AudioTranscription from "./AudioTranscription";
 
 function PhoneCallModal(props) {
 
@@ -26,15 +27,18 @@ function PhoneCallModal(props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <b>Recording</b><br/><br/>
-                <ReactAudioPlayer
-                    src={process.env.PUBLIC_URL + props.phoneCallData.phoneCallRecording}
-                    controls
-                />
-                <br/><br/>
-                <b>Phone Number: </b> {props.phoneCallData.phoneNumber}<br/>
-                <b>Call Date: </b> {props.phoneCallData.callDate}<br/>
-                <b>Person Who Attened It: </b> {props.phoneCallData.personWhoAttended}<br/>
+                <div className="recording-data-block">
+                    <b>Recording</b><br /><br />
+                    <ReactAudioPlayer
+                        src={process.env.PUBLIC_URL + props.phoneCallData.phoneCallRecording}
+                        controls
+                    />
+                    <br /><br />
+                    <b>Phone Number: </b> {props.phoneCallData.phoneNumber}<br />
+                    <b>Call Date: </b> {props.phoneCallData.callDate}<br />
+                    <b>Person Who Attened It: </b> {props.phoneCallData.personWhoAttended}<br />
+                </div>
+                <AudioTranscription transcript={props.phoneCallData.transcript} />
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={props.onHide}>Close</Button>

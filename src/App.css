@@ -40,3 +40,15 @@
 .table-responsive {
   margin-top: 40px;
 }
+
+.recording-data-block {
+  margin-bottom: 20px;
+}
+
+.transcription-block {
+  border-top: 2px solid hsla(0, 0%, 13%, 0.105) ;
+}
+
+.transcription-block h4 {
+  margin-top: 20px;
+}
