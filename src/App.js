@@ -17,8 +17,8 @@ function App() {
       <Table responsive>
         <thead>
           <tr>
-            <th scope='col'>Call Date</th>
             <th scope='col'>Phone Number</th>
+            <th scope='col'>Call Date</th>
             <th scope='col'>Person Who Called</th>
             <th scope='col'>Person Who Attended</th>
             <th scope='col'>Duration</th>
@@ -30,8 +30,8 @@ function App() {
             data
             && data.map((pc) => (
               <tr id={pc.id}>
-                <td>{pc.callDate}</td>
                 <td>{pc.phoneNumber}</td>
+                <td>{pc.callDate}</td>
                 <td>{pc.personWhoCalled}</td>
                 <td>{pc.personWhoAttended}</td>
                 <td>{pc.duration}</td>

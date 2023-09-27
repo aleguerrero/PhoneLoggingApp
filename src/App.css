@@ -52,3 +52,10 @@
 .transcription-block h4 {
   margin-top: 20px;
 }
+
+th:first-child, td:first-child
+{
+  position:sticky;
+  left:0px;
+  background-color:grey;
+}
