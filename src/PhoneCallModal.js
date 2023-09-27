@@ -34,9 +34,9 @@ function PhoneCallModal(props) {
                         controls
                     />
                     <br /><br />
-                    <b>Phone Number: </b> {props.phoneCallData.phoneNumber}<br />
-                    <b>Call Date: </b> {props.phoneCallData.callDate}<br />
-                    <b>Person Who Attened It: </b> {props.phoneCallData.personWhoAttended}<br />
+                    <b>Phone Number:</b> <br/>{props.phoneCallData.phoneNumber}<br /><br/>
+                    <b>Call Date:</b> <br/>{props.phoneCallData.callDate}<br /><br/>
+                    <b>Person Who Attented It:</b> <br/>{props.phoneCallData.personWhoAttended}
                 </div>
                 <AudioTranscription transcript={props.phoneCallData.transcript} />
             </Modal.Body>
